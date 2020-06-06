@@ -1,0 +1,107 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/parallax background/plx-1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/parallax background/plx-3.png" type="Texture" id=2]
+[ext_resource path="res://Assets/parallax background/plx-4.png" type="Texture" id=3]
+[ext_resource path="res://Assets/parallax background/plx-2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/parallax background/plx-5.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Terrains/Jungle_tileset.tres" type="TileSet" id=6]
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Levels/Level.gd" type="Script" id=8]
+[ext_resource path="res://Characters/GreenGlobin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Levels/ScreenShake.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Levels/Portal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Characters/EyeMonster.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Characters/Mushroom.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Terrains/instructions.png" type="Texture" id=14]
+
+[node name="Level 1" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+z_index = 5
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 8
+format = 1
+tile_data = PoolIntArray( -262049, 25, 0, -1, 24, 0, 131167, 25, 0, 393215, 24, 0, 524383, 25, 0, 786431, 24, 0, 720943, 17, 0, 720944, 21, 0, 720950, 21, 0, 720956, 18, 0, 720973, 15, 0, 720977, 16, 0, 852015, 19, 0, 852022, 22, 0, 852028, 20, 0, 917599, 25, 0, 1179647, 24, 0, 1114204, 16, 0, 1310815, 25, 0, 1507328, 21, 0, 1507334, 21, 0, 1507340, 21, 0, 1507346, 18, 0, 1572946, 15, 0, 1572947, 16, 0, 1638400, 22, 0, 1638406, 22, 0, 1638412, 22, 0, 1638418, 20, 0, 1769471, 24, 0, 1704031, 25, 0, 1769528, 14, 0, 2031658, 17, 0, 2031666, 21, 0, 2031676, 21, 0, 2031682, 18, 0, 2162687, 24, 0, 2097247, 25, 0, 2162730, 19, 0, 2162738, 22, 0, 2162744, 22, 0, 2162750, 22, 0, 2162754, 20, 0, 2424861, 15, 0, 2424862, 16, 0, 2555903, 24, 0, 2490463, 25, 0, 2818065, 15, 0, 2818066, 16, 0, 2949119, 24, 0, 2883679, 25, 0, 3276800, 10, 0, 3276801, 10, 0, 3276803, 10, 0, 3276805, 10, 0, 3276807, 10, 0, 3276809, 10, 0, 3276811, 10, 0, 3276813, 10, 0, 3276815, 10, 0, 3276817, 10, 0, 3276819, 10, 0, 3276821, 10, 0, 3276823, 10, 0, 3276825, 10, 0, 3276827, 10, 0, 3276829, 10, 0, 3276831, 10, 0, 3276833, 10, 0, 3276835, 10, 0, 3276837, 10, 0, 3276839, 10, 0, 3276841, 10, 0, 3276843, 10, 0, 3276845, 10, 0, 3276847, 10, 0, 3276849, 10, 0, 3276851, 10, 0, 3276853, 10, 0, 3276855, 10, 0, 3276857, 10, 0, 3276859, 10, 0, 3276861, 10, 0, 3276863, 10, 0, 3276865, 10, 0, 3276867, 10, 0, 3276869, 10, 0, 3276870, 10, 0, 3276872, 10, 0, 3276874, 10, 0, 3276876, 10, 0, 3276878, 10, 0, 3276880, 10, 0, 3276882, 10, 0, 3276884, 10, 0, 3276886, 10, 0, 3276888, 10, 0, 3276890, 10, 0, 3276892, 10, 0, 3276894, 10, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.2, 0.2 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="BG-1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -2
+texture = ExtResource( 1 )
+centered = false
+
+[node name="BG-2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.4, 0.4 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+
+[node name="BG-3" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.6, 0.6 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+
+[node name="BG-4" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.8, 0.8 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+
+[node name="BG-5" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 9.32178, 115.713 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="ScreenShake" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1.07553, 0.71698 )
+
+[node name="Portal" parent="." instance=ExtResource( 11 )]
+visible = true
+position = Vector2( 119.995, 73.54 )
+scale = Vector2( 0.8, 0.8 )
+next_stage = "res://Levels/Level 2.tscn"
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 21.4621, 184.673 )
+scale = Vector2( 0.35, 0.35 )
+collision_layer = 2
+collision_mask = 3
+
+[node name="GreenGlobin" parent="." instance=ExtResource( 9 )]
+position = Vector2( 64, 72 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 0
+max_health = 12
+
+[node name="Mushroom" parent="." instance=ExtResource( 13 )]
+position = Vector2( 210, 26 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 0
+max_health = 8
+
+[node name="EyeMonster" parent="." instance=ExtResource( 12 )]
+position = Vector2( 204, 100 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 0

@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<title>Not Just Lawn Mowing | News</title>
+</head>
+<body>
+<button onClick="topFunction()" id="topBtn">Top</button>
+	<div class="logo-box">
+		<a href="Home.html"><img class="logo-position" src="Image/NotJustLawnMowing.png" alt="Logo"/></a>
+	</div>
+	<nav id="nav-box">
+		<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li><a href="Newspage1.html">News</a></li>
+			<li><a href="About.html">About</a></li>
+			<div class="dropdown">
+ 				<li><a href="Services.html">Services<img src="Image/down-white.png" width="13px" alt="Button"/></a></li>
+				<div class="dropdown-content">
+ 					<a href="Services.html#Landscaping">Landscaping</a>
+ 					<a href="Services.html#Spa & Pool">Spa & Pool</a>
+ 					<a href="Services.html#BBQ Area">BBQ Area</a>
+					<a href="Services.html#Lawn Mowing">Lawn Mowing</a>
+					<a href="Services.html#Planting">Planting</a>
+					<a href="Services.html#Sheds">Sheds</a>
+ 				</div>
+			</div>
+			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<h1 class="news-title">We've Moved to a New Location!</h1>
+	<div class="row">
+		<div class="column-left">
+			<img src="Image/news/newlo1.png" onClick="openModal();currentSlide(1)" class="img-size-left" alt="">
+		</div>
+		<div class="column-right">
+			<div class="column-right-inner">
+				<img src="Image/news/newlo2.jpg" onClick="openModal();currentSlide(2)" class="img-size-right" alt="">
+			</div>
+			<div class="column-right-inner">
+				<img src="Image/news/newlo3.jpg" onClick="openModal();currentSlide(3)" class="img-size-right" alt="">
+			</div>
+			<div class="column-right-inner">
+				<img src="Image/news/newlo4.jpg" onClick="openModal();currentSlide(4)" class="img-size-right" alt="">
+			</div>
+		</div>
+	</div>
+	
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+			<div class="mySlides">
+				<div class="numbertext">1 / 4</div>
+				<img src="Image/news/newlo1.png" style="width:100%" alt="">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">2 / 4</div>
+				<img src="Image/news/newlo2.jpg" style="width:100%" alt="">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">3 / 4</div>
+				<img src="Image/news/newlo3.jpg" style="width:100%" alt="">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">4 / 4</div>
+				<img src="Image/news/newlo4.jpg" style="width:100%" alt="">
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+			
+			<div class="column">
+				<img class="demo cursor" src="Image/news/newlo1.png" onclick="currentSlide(1)" alt="View 1">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="Image/news/newlo2.jpg" onclick="currentSlide(2)" alt="View 2">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="Image/news/newlo3.jpg" onclick="currentSlide(3)" alt="View 3">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="Image/news/newlo4.jpg" onclick="currentSlide(4)" alt="View 4">
+			</div>
+		</div>
+	</div>
+	
+	<div class="words">
+		<p class="grey-word">Dear Valued Clients,
+			<br><br>
+			We are excited to announce that our team has moved to a new location in Hamilton. We spent the previous 25 years in a home office about a mile away from our new location -- our old office served us well, and we had great memories there, but we couldn't be more excited about our new space.
+			<br><br>
+			The new office is originally an empty land located just opposite Hamilton Girls' High, putting us right on the street and looking out onto Hamilton's main intersection. We're excited about the hustle and bustle happening around our office and all of the great restaurants within an easy walking distance of the new location.
+			<br><br>
+			While we were happy with our space, there were several motivating factors to make a move:
+			<br><br>
+			<span style="color: black; font-weight: 900">More Space.</span> When we first moved into our last location, there were only two of us and plenty of room. When we left, we grown to ten and we had no more space to serve our clients. The new office offered more square footage, but more importantly we builded a cafe area with chairs, couches and TV for our clients to enjoy a cup of coffee in a relaxing setting.
+			<br><br>
+			<span style="color: black; font-weight: 900">More Visibility.</span> In our last office, we were in a home office. While we really liked our neighbors, we lived a pretty anonymous existence. There was no way for anyone in the community outside of that street to know we existed. So in our new location, we builded a full garden area along with endless pool, spa and gazebo to promote our building skills and quality. Hope this will help bolster our visibility in the area and help us more quickly come to mind as local businesses.
+			<br><br>
+			Thanks for everyone's support through the years and with the move.
+			<br><br>
+			The new address is A Block, Gate 3, Tristram Street, Hamilton.			
+		</p>		
+	</div>
+	
+	<div class="map-news">
+		<div class="gmap_canvas">
+			<iframe width= "1000" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=A%20Block%2C%20Gate%203%2C%20Tristram%20Street%2C%20Hamilton&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+			</iframe>
+			<a href="https://www.crocothemes.net"></a>
+		</div>
+	</div>
+	
+	<div class="pagination">
+		<a href="Newspage2.html">&laquo;</a>
+		<a href="Newspage1.html">1</a>
+		<a href="Newspage2.html">2</a>
+		<a href="Newspage3.html" class="active">3</a>
+		<a href="Newspage3.html">&raquo;</a>
+	</div>	
+	
+	<footer>
+		<span class="font">Follow us on</span>
+		<ul>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/facebook-f.png" alt="Facebook Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/youtube.png" alt="Youtube Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" alt="Twitter Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="Instagram Logo"></li>
+		</ul>
+		<span class="copyright">Copyright © 2019, Not Just Lawn Mowing, All Rights Reserved | Wintec</span>
+	</footer>
+	
+	<script>
+		//When the user scrolls down 20px from the top of the document, show button
+		window.onscroll = function(){scrollFunction(); myFunction();};
+		
+		var header = document.getElementById("nav-box");
+		var sticky = header.offsetTop;
+		
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+		
+		function scrollFunction(){
+			if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150){
+				document.getElementById("topBtn").style.display = "block";
+			}else{
+				document.getElementById("topBtn").style.display = "none";
+			}
+		}
+		
+		//When the user clicks on the button, scroll to the top of the website
+		function topFunction(){
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+		
+		function openModal() {
+			document.getElementById('myModal').style.display = "block";
+		}
+		
+		function closeModal() {
+			document.getElementById('myModal').style.display = "none";
+		}
+		
+		var slideIndex = 1; showSlides(slideIndex);
+		
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			var captionText = document.getElementById("caption");
+			
+			if (n > slides.length) {slideIndex = 1}
+			
+			if (n < 1) {slideIndex = slides.length}
+			
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		
+		// The function actually applying the offset on #id links
+		window.addEventListener("hashchange", function () {window.scrollTo(window.scrollX, window.scrollY - 60);});
+	</script>
+	
+</body>
+</html>

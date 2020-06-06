@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<title>Not Just Lawn Mowing | Contact</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<style>body, html {height: 100%;}</style>
+<button onClick="topFunction()" id="topBtn">Top</button>
+	<div class="logo-box">
+		<a href="Home.html"><img class="logo-position" src="Image/NotJustLawnMowing.png" alt="Logo"/></a>
+	</div>
+	<nav id="nav-box">
+		<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li><a href="Newspage1.html">News</a></li>
+			<li><a href="About.html">About</a></li>
+			<div class="dropdown">
+ 				<li><a href="Services.html">Services<img src="Image/down-white.png" width="13px" alt="Button"/></a></li>
+				<div class="dropdown-content">
+ 					<a href="Services.html#Landscaping">Landscaping</a>
+ 					<a href="Services.html#Spa & Pool">Spa & Pool</a>
+ 					<a href="Services.html#BBQ Area">BBQ Area</a>
+					<a href="Services.html#Lawn Mowing">Lawn Mowing</a>
+					<a href="Services.html#Planting">Planting</a>
+					<a href="Services.html#Sheds">Sheds</a>
+ 				</div>
+			</div>
+			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<div class="parallax">
+		<div class="filter-black"></div>
+		<h1 class="contact-title">Give us a Chance!<br>Contact Us</h1>
+	</div>
+	<div class="contact-detail-box">
+		<div class="contact-detail-box-outer">
+		<div class="contact-detail-box-left">
+			Not Just Lawn Mowing strives to provide the best service possible with every customers!
+			<br><br>
+			We operate in an industry built on trust. This can only be achieved through communication and experienced support.
+			<br><br>
+			At here you always talk to a human!
+			<br><br>
+			Have questions about us? Our entire team receives specialized training regularly to ensure you're receiving the best information possible. From basic questions to complex compliance inquiries, we're here to help!
+			<br><br>
+			Interested in learning more about our services? Our Account Executives take the time to discuss your existing garden area and help you make smart decisions that best meet your needs. 
+		</div>
+		<div class="vertical-line"></div>
+		<div class="contact-detail-box-right">
+			Corporate Office<br>
+			A Block, Gate 3, <br>
+			Tristram Street, Hamilton.
+			<div class="map-contact">
+				<div class="gmap_canvas">
+					<iframe width= "400" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=A%20Block%2C%20Gate%203%2C%20Tristram%20Street%2C%20Hamilton&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+					</iframe>
+					<a href="https://www.crocothemes.net"></a>
+				</div>
+			</div>
+			Direct Contact<br>
+			Phone: +647 834 8800<br>
+			Ext. 3249<br>
+			Email: Haley.Littlewood@wintec.ac.nz
+			<br><br>
+			Departments<br>
+			Huayin28@student.wintec.ac.nz<br>
+			Jinteo26@student.wintec.ac.nz<br>
+		</div>	
+		</div>
+	</div>
+	<div class="contact-form-box">
+		<div class="contact-form-box-outer">
+		<h1 class="contact-form-title">Contact form<br>Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</h1>
+		<div class="contact-form-box-inner">
+			<div class="contact-form-box-left">
+				<h1 class="contact-form-title">Timeframe</h1>
+			  <form class="timeframe">
+				<p>
+					<input type="radio" id="1" name="timeframe-group">
+					<label for="1">1-3 months</label>
+				</p>
+				<p>
+					<input type="radio" id="2" name="timeframe-group">
+					<label for="2">4-6 months</label>
+				</p>
+				<p>
+					<input type="radio" id="3" name="timeframe-group">
+					<label for="3">6+ months</label>
+				</p>
+				</form>
+				<h1 class="contact-form-title" style="padding-top: 30px">Project Type</h1>
+				<label class="projectType">Landscaping
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+				<label class="projectType">Spa & Pool
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+				<label class="projectType">BBQ Area
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+				<label class="projectType">Lawn Mowing
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+				<label class="projectType">Planting
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+				<label class="projectType">Sheds
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+				
+			</div>
+			<form class="personal-details-box" action="#" method="post" onSubmit="return validateForm()">
+			<div>
+				<h1 class="contact-form-title">Personal Details</h1>
+				<div class="personal-details-box-inner">
+					<div class="box-middle">
+						<div class="padding"><input type="text" id="name" placeholder=" Name *" required/><p class="error"></p></div>
+						<div class="padding"><input type="email" id="email" placeholder=" Email Address *" required/><p class="error"></p></div>
+						<div class="padding"><input type="phone" id="phone" placeholder=" Phone No.*" required/><p class="error"></p></div>
+						<div class="padding">
+							<select style="color: gray">
+								<option style="display: none" disabled selected>City</option>
+								<option>Auckland</option>
+								<option>Wellington</option>
+								<option>Christchurch</option>
+								<option>Hamilton</option>
+								<option>Tauranga</option>
+								<option>Napier</option>
+								<option>Hastings</option>
+								<option>Dunedin</option>
+								<option>Palmerston North</option>
+								<option>Nelson</option>
+								<option>Rotorua</option>
+								<option>Whangarei</option>
+								<option>New Plymouth</option>
+								<option>Invercargill</option>
+								<option>Whanganui</option>
+								<option>Gisborne</option>
+							</select>
+						</div>
+						<div class="padding"><input type="text" placeholder=" Budget (optional)"/></div>
+						
+					</div>
+					<div class="box-right padding">
+						<textarea class="textarea" placeholder="Tell us about your project." required></textarea>
+					</div>
+				</div>
+				<div class="submit-btn-position">
+					<input class="submit-btn" type="submit" value="Send Inquiry"/>
+				</div>
+			</div>
+				</form>
+		</div>
+	</div>
+	</div>
+	<div class="parallax">
+		<div class="filter-black"></div>
+		<h1 class="contact-title">Thank you</h1>
+	</div>
+
+
+	
+	<footer>
+		<span class="font">Follow us on</span>
+		<ul>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/facebook-f.png" alt="Facebook Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/youtube.png" alt="Youtube Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" alt="Twitter Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="Instagram Logo"></li>
+		</ul>
+		<span class="copyright">Copyright © 2019, Not Just Lawn Mowing, All Rights Reserved | Wintec</span>
+	</footer>
+	
+	<script>
+		//When the user scrolls down 20px from the top of the document, show button
+		window.onscroll = function(){scrollFunction(); myFunction();};
+		
+		var header = document.getElementById("nav-box");
+		var sticky = header.offsetTop;
+		
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+		
+		function scrollFunction(){
+			if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150){
+				document.getElementById("topBtn").style.display = "block";
+			}else{
+				document.getElementById("topBtn").style.display = "none";
+			}
+		}
+		
+		//When the user clicks on the button, scroll to the top of the website
+		function topFunction(){
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+		
+		// The function actually applying the offset on #id links
+		window.addEventListener("hashchange", function () {window.scrollTo(window.scrollX, window.scrollY - 60);});
+		
+		$(document).ready(function(){
+			$("form").submit(function(){
+				alert("Thank you, we'll get back to you as soon as possible.");
+			});
+		});
+		
+	</script>
+		
+</body>
+</html>

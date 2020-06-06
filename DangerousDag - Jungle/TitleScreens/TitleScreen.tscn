@@ -1,0 +1,108 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Assets/parallax background/plx-4.png" type="Texture" id=1]
+[ext_resource path="res://Assets/parallax background/plx-1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/parallax background/plx-3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/parallax background/plx-2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/parallax background/plx-5.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Terrains/Jungle_tileset.tres" type="TileSet" id=6]
+[ext_resource path="res://Assets/Terrains/start.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Terrains/title300.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Terrains/exit.png" type="Texture" id=9]
+[ext_resource path="res://TitleScreens/TitleScreen.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Terrains/exithover.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Terrains/starthover.png" type="Texture" id=12]
+
+[node name="TitleScreen" type="Node"]
+script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="Sprite"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="Sprite/Sprite2"]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sprite4" type="Sprite" parent="Sprite/Sprite2/Sprite3"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite5" type="Sprite" parent="Sprite/Sprite2/Sprite3/Sprite4"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 8
+format = 1
+tile_data = PoolIntArray( 3276800, 10, 0, 3276802, 10, 0, 3276804, 10, 0, 3276806, 10, 0, 3276808, 10, 0, 3276810, 10, 0, 3276812, 10, 0, 3276814, 10, 0, 3276816, 10, 0, 3276818, 10, 0, 3276820, 10, 0, 3276822, 10, 0, 3276824, 10, 0, 3276826, 10, 0, 3276828, 10, 0, 3276830, 10, 0, 3276832, 10, 0, 3276834, 10, 0, 3276836, 10, 0, 3276838, 10, 0, 3276840, 10, 0, 3276842, 10, 0, 3276844, 10, 0, 3276846, 10, 0, 3276848, 10, 0, 3276850, 10, 0, 3276852, 10, 0, 3276854, 10, 0, 3276856, 10, 0, 3276858, 10, 0, 3276860, 10, 0, 3276862, 10, 0, 3276864, 10, 0, 3276866, 10, 0, 3276868, 10, 0, 3276870, 10, 0, 3276872, 10, 0, 3276874, 10, 0, 3276876, 10, 0, 3276878, 10, 0, 3276880, 10, 0, 3276882, 10, 0, 3276884, 10, 0, 3276886, 10, 0, 3276888, 10, 0, 3276890, 10, 0, 3276892, 10, 0, 3276894, 10, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.374, 0.367 )
+limit_left = 0
+limit_top = 0
+limit_right = 384
+limit_bottom = 220
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 0.375
+anchor_bottom = 0.367
+margin_top = 30.0
+margin_bottom = -30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 42.0
+margin_right = 342.0
+margin_bottom = 160.0
+size_flags_horizontal = 4
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 57.0
+texture = ExtResource( 8 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_left = 90.0
+margin_top = 73.0
+margin_right = 210.0
+margin_bottom = 137.0
+size_flags_horizontal = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_right = 120.0
+margin_bottom = 30.0
+texture_normal = ExtResource( 7 )
+texture_focused = ExtResource( 12 )
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 120.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 11 )
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]

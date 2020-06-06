@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<title>Not Just Lawn Mowing | News</title>
+</head>
+<body>
+<button onClick="topFunction()" id="topBtn">Top</button>
+	<div class="logo-box">
+		<a href="Home.html"><img class="logo-position" src="Image/NotJustLawnMowing.png" alt="Logo"/></a>
+	</div>
+	<nav id="nav-box">
+		<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li><a href="Newspage1.html">News</a></li>
+			<li><a href="About.html">About</a></li>
+			<div class="dropdown">
+ 				<li><a href="Services.html">Services<img src="Image/down-white.png" width="13px" alt="Button"/></a></li>
+				<div class="dropdown-content">
+ 					<a href="Services.html#Landscaping">Landscaping</a>
+ 					<a href="Services.html#Spa & Pool">Spa & Pool</a>
+ 					<a href="Services.html#BBQ Area">BBQ Area</a>
+					<a href="Services.html#Lawn Mowing">Lawn Mowing</a>
+					<a href="Services.html#Planting">Planting</a>
+					<a href="Services.html#Sheds">Sheds</a>
+ 				</div>
+			</div>
+			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<h1 class="news-title">Cafe Area</h1>
+	<div class="row">
+		<div class="column-left">
+			<img src="Image/news/cafe.jpg" onClick="openModal();currentSlide(1)" class="img-size-left" alt="">
+		</div>
+		<div class="column-right">
+			<div class="column-right-inner">
+				<img src="Image/news/cafe2.jpg" onClick="openModal();currentSlide(2)" class="img-size-right" alt="">
+			</div>
+			<div class="column-right-inner">
+				<img src="Image/news/cafe3.jpg" onClick="openModal();currentSlide(3)" class="img-size-right" alt="">
+			</div>
+			<div class="column-right-inner">
+				<img src="Image/news/cafe4.jpg" onClick="openModal();currentSlide(4)" class="img-size-right" alt="">
+			</div>
+		</div>
+	</div>
+	
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+			<div class="mySlides">
+				<div class="numbertext">1 / 4</div>
+				<img src="Image/news/cafe.jpg" style="width:100%" alt="">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">2 / 4</div>
+				<img src="Image/news/cafe2.jpg" style="width:100%" alt="">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">3 / 4</div>
+				<img src="Image/news/cafe3.jpg" style="width:100%" alt="">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">4 / 4</div>
+				<img src="Image/news/cafe4.jpg" style="width:100%" alt="">
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+			
+			<div class="column">
+				<img class="demo cursor" src="Image/news/cafe.jpg" onclick="currentSlide(1)" alt="View 1">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="Image/news/cafe2.jpg" onclick="currentSlide(2)" alt="View 2">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="Image/news/cafe3.jpg" onclick="currentSlide(3)" alt="View 3">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="Image/news/cafe4.jpg" onclick="currentSlide(4)" alt="View 4">
+			</div>
+		</div>
+	</div>
+	
+	<div class="words">
+		<p class="grey-word">
+			Sometimes, a good cafe isn’t a cafe at all, it’s a feeling: as you sit at a window while the sun wakes with you, a warm — but not over-familiar — waiter offers you a coffee. If you’ve been here before, they might have remembered your usual, but will check to make sure. A clean menu arrives along with your drink of choice. It reads as an expression of the seasons, is expertly balanced, and deeply considered. Then you order what you always do, and the waiter simply gives a knowing smile.
+			<br><br>
+			Time at a good cafe could be measured by the gentle wake-up ding of the bell on the pass and the turning of pages in the Sunday paper, or by the bustle of customers in and out of the door, and the get-down beat of chart-toppers. But one thing is for certain: you’ll always be left wondering how soon is too soon to return.
+		</p>		
+	</div>
+	
+	<div class="pagination">
+		<a href="Newspage1.html">&laquo;</a>
+		<a href="Newspage1.html">1</a>
+		<a href="Newspage2.html" class="active">2</a>
+		<a href="Newspage3.html">3</a>
+		<a href="Newspage3.html">&raquo;</a>
+	</div>	
+	
+	<footer>
+		<span class="font">Follow us on</span>
+		<ul>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/facebook-f.png" alt="Facebook Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/youtube.png" alt="Youtube Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" alt="Twitter Logo"></li>
+			<li><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="Instagram Logo"></li>
+		</ul>
+		<span class="copyright">Copyright © 2019, Not Just Lawn Mowing, All Rights Reserved | Wintec</span>
+	</footer>
+	
+	<script>
+		//When the user scrolls down 20px from the top of the document, show button
+		window.onscroll = function(){scrollFunction(); myFunction();};
+		
+		var header = document.getElementById("nav-box");
+		var sticky = header.offsetTop;
+		
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+		
+		function scrollFunction(){
+			if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150){
+				document.getElementById("topBtn").style.display = "block";
+			}else{
+				document.getElementById("topBtn").style.display = "none";
+			}
+		}
+		
+		//When the user clicks on the button, scroll to the top of the website
+		function topFunction(){
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+		
+		function openModal() {
+			document.getElementById('myModal').style.display = "block";
+		}
+		
+		function closeModal() {
+			document.getElementById('myModal').style.display = "none";
+		}
+		
+		var slideIndex = 1; showSlides(slideIndex);
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			var captionText = document.getElementById("caption");
+			
+			if (n > slides.length) {slideIndex = 1}
+			
+			if (n < 1) {slideIndex = slides.length}
+			
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		
+		// The function actually applying the offset on #id links
+		window.addEventListener("hashchange", function () {window.scrollTo(window.scrollX, window.scrollY - 60);});
+	</script>
+	
+</body>
+</html>

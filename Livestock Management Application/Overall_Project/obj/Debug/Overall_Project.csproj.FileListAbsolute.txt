@@ -18,3 +18,23 @@ C:\Users\jk\Desktop\Overall_Project\Overall_Project\obj\Debug\Overall_Project.cs
 C:\Users\jk\Desktop\Overall_Project\Overall_Project\obj\Debug\Overall_Project.csproj.CoreCompileInputs.cache
 C:\Users\jk\Desktop\Overall_Project\Overall_Project\obj\Debug\Overall_Project.exe
 C:\Users\jk\Desktop\Overall_Project\Overall_Project\obj\Debug\Overall_Project.pdb
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\bin\Debug\Overall_Project.exe.config
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\bin\Debug\Overall_Project.exe
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\bin\Debug\Overall_Project.pdb
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\obj\Debug\Overall_Project.csprojAssemblyReference.cache
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\obj\Debug\Overall_Project.Form1.resources
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\obj\Debug\Overall_Project.Properties.Resources.resources
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\obj\Debug\Overall_Project.csproj.GenerateResource.cache
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\obj\Debug\Overall_Project.csproj.CoreCompileInputs.cache
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\obj\Debug\Overall_Project.exe
+D:\Wintec\Sem4\App Dev\Overall_Project\Overall_Project\Overall_Project\obj\Debug\Overall_Project.pdb
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\bin\Debug\Overall_Project.exe.config
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\bin\Debug\Overall_Project.exe
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\bin\Debug\Overall_Project.pdb
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\obj\Debug\Overall_Project.csprojAssemblyReference.cache
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\obj\Debug\Overall_Project.Form1.resources
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\obj\Debug\Overall_Project.Properties.Resources.resources
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\obj\Debug\Overall_Project.csproj.GenerateResource.cache
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\obj\Debug\Overall_Project.csproj.CoreCompileInputs.cache
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\obj\Debug\Overall_Project.exe
+C:\Users\jinki\Documents\GitHub\Wintec-Assignments\Livestock Management Application\Overall_Project\obj\Debug\Overall_Project.pdb

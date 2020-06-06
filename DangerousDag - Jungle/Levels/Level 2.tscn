@@ -1,0 +1,179 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Assets/parallax background/plx-1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/parallax background/plx-3.png" type="Texture" id=2]
+[ext_resource path="res://Assets/parallax background/plx-2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/parallax background/plx-4.png" type="Texture" id=4]
+[ext_resource path="res://Assets/parallax background/plx-5.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Terrains/Jungle_tileset.tres" type="TileSet" id=6]
+[ext_resource path="res://Assets/Terrains/Object_tileset.tres" type="TileSet" id=7]
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Levels/Level 2.gd" type="Script" id=9]
+[ext_resource path="res://Levels/Portal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Levels/MovingPlatform.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Levels/PathVertical.gd" type="Script" id=12]
+[ext_resource path="res://Characters/GreenGlobin.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Levels/ScreenShake.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Characters/EyeMonster.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Characters/Mushroom.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Levels/Objects.gd" type="Script" id=17]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 275, 4.387 )
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 64, 176, 0, 0, 0, 0, 64.3351, 88.6044, 0, 0, 0, 0, 64, 176 )
+}
+
+[node name="Level 2" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+z_index = 5
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 8
+format = 1
+tile_data = PoolIntArray( -327502, 24, 0, -131074, 24, 0, 262142, 24, 0, 196786, 24, 0, 589822, 24, 0, 786610, 24, 0, 983038, 24, 0, 1376254, 24, 0, 1376434, 24, 0, 1441861, 15, 0, 1441862, 16, 0, 1769470, 24, 0, 1900630, 15, 0, 1900631, 16, 0, 1966258, 24, 0, 2162686, 24, 0, 2359365, 15, 0, 2359366, 16, 0, 2555902, 24, 0, 2556017, 15, 0, 2556021, 16, 0, 2556082, 24, 0, 2818100, 15, 0, 2818101, 16, 0, 2949118, 24, 0, 2949245, 17, 0, 2949253, 21, 0, 2949259, 21, 0, 2949265, 21, 0, 2949271, 18, 0, 3080317, 19, 0, 3080325, 22, 0, 3080331, 22, 0, 3080337, 22, 0, 3080343, 20, 0, 3145906, 24, 0, 3276800, 10, 0, 3276802, 10, 0, 3276804, 10, 0, 3276806, 10, 0, 3276808, 10, 0, 3276810, 10, 0, 3276812, 10, 0, 3276814, 10, 0, 3276816, 10, 0, 3276818, 10, 0, 3276820, 10, 0, 3276822, 10, 0, 3276824, 10, 0, 3276826, 10, 0, 3276828, 10, 0, 3276830, 10, 0, 3276832, 10, 0, 3276834, 10, 0, 3276836, 11, 0 )
+
+[node name="Objects" type="TileMap" parent="."]
+scale = Vector2( 0.15, 0.15 )
+z_index = 4
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 8
+format = 1
+tile_data = PoolIntArray( 11206784, 0, 0, 11206800, 0, 0, 11206816, 0, 0, 11206832, 0, 0, 11206848, 0, 0, 11206864, 0, 0, 11206880, 0, 0, 11206896, 0, 0, 11206912, 0, 0, 11206928, 0, 0, 11206944, 0, 0, 11206960, 0, 0, 11206976, 0, 0, 11206992, 0, 0, 11207008, 0, 0, 11207024, 0, 0, 11207040, 0, 0, 11207056, 0, 0, 11207072, 0, 0, 11207088, 0, 0, 11207104, 0, 0, 11207120, 0, 0, 11207136, 0, 0, 11207152, 0, 0, 11207168, 0, 0, 11207184, 0, 0, 11207200, 0, 0, 11207216, 0, 0, 11207232, 0, 0, 11927691, 1, 0, 11927707, 1, 0, 11927723, 1, 0, 11927739, 1, 0, 11927755, 1, 0, 11927771, 1, 0, 11927787, 1, 0, 11927803, 1, 0, 11927819, 1, 0, 11927835, 1, 0, 11927851, 1, 0, 11927867, 1, 0, 11927883, 1, 0, 11927899, 1, 0, 11927915, 1, 0, 11927931, 1, 0, 11927947, 1, 0, 11927963, 1, 0, 11927979, 1, 0, 11927995, 1, 0, 11927996, 1, 0, 11928012, 1, 0, 11928028, 1, 0, 11928044, 1, 0, 11928060, 1, 0, 11928076, 1, 0, 11928092, 1, 0, 11928108, 1, 0, 11928124, 1, 0, 11928140, 1, 0, 11928156, 1, 0, 11928172, 1, 0, 11928188, 1, 0 )
+script = ExtResource( 17 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 434.13, 215.193 )
+shape = SubResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.2, 0.2 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 384, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.4, 0.4 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 384, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.6, 0.6 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_mirroring = Vector2( 384, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.8, 0.8 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+motion_mirroring = Vector2( 384, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Portal" parent="." instance=ExtResource( 10 )]
+visible = true
+position = Vector2( 645.748, 159.901 )
+scale = Vector2( 0.8, 0.8 )
+next_stage = "res://TitleScreens/Ending.tscn"
+
+[node name="PathVertical" type="Path2D" parent="."]
+position = Vector2( 41.1057, 1.58885 )
+curve = SubResource( 2 )
+script = ExtResource( 12 )
+speed = 35
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathVertical"]
+position = Vector2( 64, 176 )
+rotate = false
+
+[node name="TileMap" type="TileMap" parent="PathVertical/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 8
+format = 1
+tile_data = PoolIntArray( -4, 15, 0, -65536, 16, 0 )
+
+[node name="PathVertical2" type="Path2D" parent="."]
+position = Vector2( 472.199, -35.6598 )
+curve = SubResource( 2 )
+script = ExtResource( 12 )
+speed = 35
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathVertical2"]
+position = Vector2( 64, 176 )
+rotate = false
+
+[node name="TileMap" type="TileMap" parent="PathVertical2/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 8
+format = 1
+tile_data = PoolIntArray( -4, 15, 0, -65536, 16, 0 )
+
+[node name="MovingPlatform" parent="." instance=ExtResource( 11 )]
+position = Vector2( 208, 61 )
+scale = Vector2( 0.5, 0.5 )
+move_to = Vector2( -150, 0 )
+speed = 100.0
+
+[node name="MovingPlatform2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 432, 92 )
+scale = Vector2( 0.5, 0.5 )
+move_to = Vector2( 100, 0 )
+speed = 120.0
+
+[node name="ScreenShake" parent="." instance=ExtResource( 14 )]
+position = Vector2( 204, 40 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( 21.6481, 153.189 )
+scale = Vector2( 0.35, 0.35 )
+collision_layer = 2
+collision_mask = 3
+
+[node name="GreenGlobin" parent="." instance=ExtResource( 13 )]
+position = Vector2( 590.655, 159.661 )
+scale = Vector2( 0.5, 0.5 )
+max_health = 12
+
+[node name="Mushroom" parent="." instance=ExtResource( 16 )]
+position = Vector2( 430.976, 70.3021 )
+scale = Vector2( 0.5, 0.5 )
+max_health = 8
+
+[node name="EyeMonster" parent="." instance=ExtResource( 15 )]
+position = Vector2( 205.177, 35.3814 )
+scale = Vector2( 0.5, 0.5 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

@@ -1,0 +1,89 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Player/Dag/Idle0.png" type="Texture" id=2]
+[ext_resource path="res://Characters/Player.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Player/Dag/Run4.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Player/Dag/Fall0.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Player/Dag/Fire1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Player/Dag/Fire0.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Player/Dag/Run5.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Player/Dag/Jump0.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Player/Dag/Fire2.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Player/Dag/Run0.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Player/Dag/Run1.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Player/Dag/Run2.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Player/Dag/Run3.png" type="Texture" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "idle",
+"speed": 0.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "takehit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": false,
+"name": "fall",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "jump",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "fire",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 5 ), null ],
+"loop": true,
+"name": "death",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 28 )
+
+[node name="Player" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+speed = 100
+max_health = 10
+damage = 1
+
+[node name="AnimatedSprite" parent="." index="0"]
+z_index = 1
+frames = SubResource( 1 )
+animation = "takehit"
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+position = Vector2( 0, 4 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+current = true
+zoom = Vector2( 0.22, 0.22 )
+limit_left = -100000
+limit_top = -100000
+limit_right = 100000
+limit_bottom = 100000
+limit_smoothed = true
+
+[node name="Position2D" type="Position2D" parent="." index="3"]
+position = Vector2( 35, 10 )
+
+[node name="Timer" parent="." index="4"]
+wait_time = 1.0
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

@@ -151,8 +151,8 @@ namespace Overall_Project
         public void readData() //read data from database
         {
             String[] farmTable = new String[] { "Commodity Prices", "Cows", "Dogs", "Goats", "Sheep" }; //table names
-            String conn_string = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\\Users\\jk\\Desktop\\" +
-                "Overall_Project\\FarmInfomation.accdb; Persist Security Info = False"; //connection address
+            String conn_string = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\\Users\\jinki\\Documents\\GitHub\\Wintec-Assignments\\Livestock Management Application" +
+                "\\FarmInfomation.accdb; Persist Security Info = False"; //connection address
             String q = ""; //query
             OleDbConnection conn = new OleDbConnection(conn_string); //set up connection
             conn.Open(); //open connection
@@ -276,7 +276,7 @@ namespace Overall_Project
         {
             try //try catching errors
             {
-                TextWriter tw = new StreamWriter("C:/Users/jk/Desktop/Overall_Project/Profit List.txt", true);
+                TextWriter tw = new StreamWriter("C:/Users/jinki/Documents/GitHub/Wintec-Assignments/Livestock Management Application/Profit List.txt", true);
                 tw.WriteLine(livestockTree.profitInOrder().ToString());
                 tw.Close();
                 MessageBox.Show(livestockTree.profitInOrder(),"Profit List(ASC)"); //get data from binary tree

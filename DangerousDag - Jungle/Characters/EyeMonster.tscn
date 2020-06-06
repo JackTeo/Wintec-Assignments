@@ -1,0 +1,85 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Enemy/Flying eye/attack/tile000.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Enemy/Flying eye/takehit/tile003.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Enemy/Flying eye/death/tile003.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Enemy/Flying eye/attack/tile006.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Enemy/Flying eye/attack/tile004.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Enemy/Flying eye/attack/tile003.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Enemy/Flying eye/idle/tile007.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Enemy/Flying eye/takehit/tile000.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Enemy/Flying eye/idle/tile003.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Enemy/Flying eye/attack/tile005.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Enemy/Flying eye/attack/tile007.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Enemy/Flying eye/death/tile000.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Enemy/Flying eye/death/tile001.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Enemy/Flying eye/takehit/tile002.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Enemy/Flying eye/idle/tile000.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Enemy/Flying eye/idle/tile005.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Enemy/Flying eye/idle/tile004.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Enemy/Flying eye/attack/tile001.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Enemy/Flying eye/idle/tile006.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Enemy/Flying eye/death/tile002.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Enemy/Flying eye/takehit/tile001.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Enemy/Flying eye/attack/tile002.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Enemy/Flying eye/idle/tile001.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Enemy/Flying eye/idle/tile002.png" type="Texture" id=25]
+[ext_resource path="res://Characters/EyeMonster.gd" type="Script" id=26]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "death",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 19 ), ExtResource( 23 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "attack",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "takehit",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 10 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "run",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 20 )
+
+[node name="EyeMonster" instance=ExtResource( 1 )]
+script = ExtResource( 26 )
+speed = 50
+max_health = 5
+damage = 2
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = SubResource( 1 )
+animation = "run"
+offset = Vector2( -4, 0 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+position = Vector2( 0, 8 )
+shape = SubResource( 2 )
+
+[node name="RayCast2D" parent="." index="2"]
+position = Vector2( 16, 0 )
+enabled = true
+cast_to = Vector2( 0, 30 )
+
+[node name="RayCast2DFront" parent="." index="3"]
+position = Vector2( 0, 12 )
+rotation = -1.5708
+enabled = true
+cast_to = Vector2( 0, 20 )
+
+[node name="InvulnerableTimer" parent="." index="6"]
+wait_time = 1.0
+one_shot = false
