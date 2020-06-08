@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Characters/Player.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Kenny/PNG/Hitman 1/hitman1_gun.png" type="Texture" id=3]
+[ext_resource path="res://Bullets/PlayerBullet.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 20 )
+
+[node name="Player" instance=ExtResource( 2 )]
+scale = Vector2( 1, 1.00568 )
+collision_layer = 2
+collision_mask = 5
+script = ExtResource( 1 )
+Bullet = ExtResource( 4 )
+speed = 200
+health = 100
+
+[node name="Body" parent="." index="0"]
+texture = ExtResource( 3 )
+offset = Vector2( 9, 0 )
+
+[node name="Muzzle" parent="Body" index="0"]
+position = Vector2( 36, 9 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+current = true
+limit_left = 0
+limit_top = 0
