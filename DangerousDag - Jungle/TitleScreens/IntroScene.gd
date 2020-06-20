@@ -1,7 +1,7 @@
 extends Node
 
 export (String, FILE,"*.tscn") var skip_to_scene
-export (String, FILE,"*.txt") var story_line_file
+#export (String, FILE,"*.txt") var story_line_file
 export (Texture) var person
 
 #onready var stsNode = get_node("Skip") #to skip to next world

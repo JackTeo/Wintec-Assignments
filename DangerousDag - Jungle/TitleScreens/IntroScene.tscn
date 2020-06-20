@@ -19,7 +19,6 @@ modulate_color = Color( 1, 1, 1, 0.392157 )
 [node name="IntroScene" type="Node"]
 script = ExtResource( 6 )
 skip_to_scene = "res://Levels/Level 1.tscn"
-story_line_file = "res://Assets/Script/GAmeStory.txt"
 person = ExtResource( 7 )
 
 [node name="Background" type="Sprite" parent="."]
